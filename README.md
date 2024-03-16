@@ -20,14 +20,9 @@ $even\\_pos = sin(position \times div\_term)$, $odd\\_pos = cos(position \times 
 
 _NB_: The following code and explanation implements the multihead attention a bit differently from that in the original paper. $Q,K,V \in \mathbb{R}^{seq, d_{model}}$
 
-Original paper:
 -  $W_i^Q \in \mathbb{R}^{d_{\text{model}} \times d_k}, \quad W_i^K \in \mathbb{R}^{d_{\text{model}} \times d_k}, \quad W_i^V \in \mathbb{R}^{d_{\text{model}} \times d_v}, \quad \text{and} \quad W^O \in \mathbb{R}^{h \cdot d_v \times d_{\text{model}}}$
 - These are weight matrix for each head
 
-Code below:
-- $W_i^Q \in \mathbb{R}^{d_{\text{model}} \times d_{model} }, \quad W_i^K \in \mathbb{R}^{d_{\text{model}} \times d_{model} }, \quad W_i^V \in \mathbb{R}^{d_{\text{model}} \times d_{model} }, \quad W^O \in \mathbb{R}^{h \cdot d_v \times d_{\text{model}}}$
-- Only one big weight matrix for $Q,K,V$.
-- Split the heads after linear transformation.
 
 ![image](https://github.com/guyuxuan9/UROP_robotic_arm/assets/58468284/5e12311f-dee3-4d09-9dce-90e81c93458c)
 
